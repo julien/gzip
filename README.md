@@ -21,7 +21,7 @@ func handler(func w.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    http.HandleFunc("/", GZip(handler))
+    http.HandleFunc("/", gzip.GZip(handler))
     log.Fatalf(http.ListenAndServe(":8000", nil))
 }
 ```

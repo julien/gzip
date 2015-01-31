@@ -1,6 +1,4 @@
-// Package gzip provides a simple http.Handler that
-// adds Gzip encoding to your http.Handlers
-
+// Package gzip provides a simple http.Handler that adds Gzip encoding to your http.Handlers
 package gzip
 
 import (
@@ -23,7 +21,6 @@ func (w gzipResponseWriter) Write(b []byte) (int, error) {
 }
 
 // GZip adds GZip compression to http.Handler instances
-//
 func GZip(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
